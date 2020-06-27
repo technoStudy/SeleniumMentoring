@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+
+    <style>
+        body {
+        text-align: center;
+        }
+
+        h1{
+        color:navy
+        }
+
+        p {
+        font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+        }
+
+    </style>
+
+</head>
+
+
+<body bgcolor = "#E0E0F8">
+
+<h1> <i>
+    Please fill in the form :)
+</i></h1>
+<form>
+
+    <p name="nameP">
+        Name:   <br><input name="name" required><br>
+    </p>
+
+    <p name="lastNameP">
+        Last Name:   <br><input name="last name" required><br>
+    </p>
+
+    <p name="usernameP">
+        Username:  <br><input name="username" required><br>
+    </p>
+
+    <p name="passwordP">
+        Password:  <br><input name="password" type="password" required><br>
+    </p>
+
+    <p name="passwordRptP">
+        Repeat Password:  <br><input name="passwordRpt" type="password" required><br>
+    </p>
+
+    <p name="addressP">
+        Address:  <br><textarea name="address" cols="50" rows="5" required></textarea><br>
+    </p>
+
+    <p name="countryP">
+        Country:
+        <select name="country" required>
+            <option>USA</option>
+            <option>UK</option>
+            <option>UAE</option>
+            <option>Turkey</option>
+            <option>Turkmenistan</option>
+            <option>South Africa Republic</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Italy</option>
+            <option>India</option>
+            <option>Brazil</option>
+            <option>Peru</option>
+
+        </select>
+    </p>
+
+    <p name="ageSelP">
+        Age:
+        <select>
+            <option> < 18 </option>
+            <option> 18-24 </option>
+            <option> 24-30 </option>
+            <option> 31-40 </option>
+            <option> 41-50 </option>
+            <option> 51-60 </option>
+            <option> > 60 </option>
+
+        </select>
+    </p>
+
+    <p name="genderP">
+        Gender:
+        <br><input type="radio" name="gender" id="female">Female</input> <br>
+        <input type="radio" name="gender" id="male">Male</input><br>
+    </p>
+
+    <p name="planP">
+        Plan:
+        <select name="plan" required>
+            <option value="f">Free</option>
+            <option value="b">Basic</option>
+            <option value="e">Enterprise</option>
+        </select>
+    </p>
+
+    <p name="contactP">
+        Contact Preference:
+        <select>
+            <option>Phone</option>
+            <option>Email</option>
+        </select>
+    </p>
+    
+    <p name="termsAndConditions">
+        I agree to terms and conditions <input type="checkbox" name="agreement" required>
+    </p>
+    
+    <p name="submitBP">
+        <input type="image" src=submit.png width="150" height="35" name="submit" alt="Submit" />
+    </p>
+
+</form>
+
+</body>
+</html>
