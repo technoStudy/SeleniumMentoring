@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class _02_SwitchToWindow {
 
@@ -23,45 +24,70 @@ public class _02_SwitchToWindow {
      */
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\halit\\Documents\\Selenium\\chromedriver\\chromedriver.exe");
+
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+
         driver.get("https://www.naukri.com/");
 
-        Thread.sleep(5000);
-        String mainPageHandle = driver.getWindowHandle();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        changeWindow(driver);
-        driver.switchTo().window(mainPageHandle); //to focus again our main page
-        Thread.sleep(13000);
-        driver.findElement(By.id("block")).click();
+        driver.manage().window().maximize();
 
-        System.out.println(driver.getCurrentUrl());
+        String firstURL = driver.getCurrentUrl();
 
-        Thread.sleep(7000);
-        WebElement toolsButton = driver.findElement(By.xpath("(//div[@class='mTxt'])[4]"));
-        Actions action = new Actions(driver);
-        action.moveToElement(toolsButton).perform();
+        Set<String> allWindows = driver.getWindowHandles();
 
-        driver.findElement(By.cssSelector("a[title=\"Salary Trends\"]")).click();
+        for (String handle: allWindows) {
 
-        changeWindow(driver);
-        String url2 = driver.getCurrentUrl();
-        System.out.println(url2);
+            driver.switchTo().window(handle);
 
-        driver.switchTo().window(mainPageHandle);
+        }
 
-        System.out.println(driver.getCurrentUrl());
+        String secondURL = driver.getCurrentUrl();
 
         driver.close();
-    }
-    public static void changeWindow (WebDriver driver) {
-        String mainPageHandle = driver.getWindowHandle();
-        Set<String> windowHandlesNew = driver.getWindowHandles();
-        for (String windowHandleNew : windowHandlesNew) {
-            if(!windowHandleNew.equals(mainPageHandle)){
-                driver.switchTo().window(windowHandleNew);
-            }
+
+        allWindows = driver.getWindowHandles();
+
+        for (String handle: allWindows) {
+
+            driver.switchTo().window(handle);
+
         }
+
+        String parentWindow = driver.getWindowHandle();
+
+        Actions action = new Actions(driver);
+
+        WebElement tools = driver.findElement(By.xpath("//div[contains(text(),'Tools')]"));
+
+        action.moveToElement(tools).perform();
+
+        WebElement salaryTrends = driver.findElement(By.xpath("//a[@title='Salary Trends']"));
+
+        action.moveToElement(salaryTrends).click().perform();
+
+        allWindows = driver.getWindowHandles();
+
+        for (String handle : allWindows){
+
+            driver.switchTo().window(handle);
+
+        }
+
+        String thirdURL = driver.getCurrentUrl();
+
+        driver.switchTo().window(parentWindow);
+
+        String fourthURL = driver.getCurrentUrl();
+
+        System.out.println(firstURL);
+        System.out.println(secondURL);
+        System.out.println(thirdURL);
+        System.out.println(fourthURL);
+
+        driver.quit();
+
     }
 
     }
