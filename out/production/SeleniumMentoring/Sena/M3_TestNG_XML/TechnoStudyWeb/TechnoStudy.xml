@@ -1,0 +1,18 @@
+<suite name="Techno Study Website" parallel="classes" thead-count="3">
+        <test name="Regression">
+            <classes>
+                <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.HomePage"></class>
+                <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.ContactUs"></class>
+                <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.ApplyNow"></class>
+            </classes>
+        </test>
+
+    <test name="Without Home Page">
+        <classes>
+            <exclude name="Sena.M3_TestNG_XML.TechnoStudyWeb.HomePage"></exclude>
+            <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.ContactUs"></class>
+            <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.ApplyNow"></class>
+        </classes>
+
+    </test>
+</suite>
