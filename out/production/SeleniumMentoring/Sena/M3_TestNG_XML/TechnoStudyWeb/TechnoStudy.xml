@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Techno Study Suite" parallel="classes" thread-count="5">
+
+        <test name="Regression Test">
+            <classes>
+                <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.ApplyNow"></class>
+                <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.ContactUs"></class>
+                <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.HomePage"></class>
+            </classes>
+        </test>
+
+        <test name="Just Contact Us and Apply Now">
+            <classes>
+                <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.ApplyNow"></class>
+                <class name="Sena.M3_TestNG_XML.TechnoStudyWeb.ContactUs"></class>
+
+            </classes>
+        </test>
+
+</suite>
