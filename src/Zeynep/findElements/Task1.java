@@ -27,6 +27,7 @@ public class Task1 {
 
         System.setProperty("webdriver.chrome.driver", "/Users/AKMERCAN/Desktop/Selenium/Chrome Driver/chromedriver-4");
         WebDriver driver = new ChromeDriver(); // this will open the chrome browser
+        driver.get("http://tutorialsninja.com/demo/index.php?route=common/home");
 
         //click on Phones & PDAs
         driver.findElement(By.xpath("//a[text()='Phones & PDAs']")).click();

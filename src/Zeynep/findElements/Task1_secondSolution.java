@@ -26,6 +26,7 @@ public class Task1_secondSolution {
 
         //~ get the brandName of phones
         Thread.sleep(2000);
+        //List<WebElement> elements = driver.findElements(By.cssSelector(".caption>h4>a"));
         List<WebElement> brandeNames = driver.findElements(By.cssSelector(".caption>h4>a"));
         ArrayList<String> brande = new ArrayList<>();
         for (WebElement brandeName : brandeNames) {
