@@ -1,0 +1,10 @@
+<suite name = "Suite1" parallel = "methods" thread-count = "2">
+    <test name = "Test1">
+        <parameter name = "usernameStr" value = "standard_user"></parameter>
+        <parameter name = "passwordStr" value = "secret_sauce"></parameter>
+        <classes>
+            <class name = "Halit._09_TestNG_xml._05_Test2"></class>
+            <class name = "Halit._09_TestNG_xml._06_Test3"></class>
+        </classes>
+    </test>
+</suite>
