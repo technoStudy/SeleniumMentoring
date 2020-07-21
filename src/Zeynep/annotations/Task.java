@@ -28,7 +28,7 @@ public class Task {
 
    @BeforeClass
    void setup(){
-       System.setProperty("webdriver.chrome.driver", "/Users/AKMERCAN/Desktop/Selenium/Chrome Driver/chromedriver-4");
+       System.setProperty("webdriver.chrome.driver", "/Users/yavuzaydin/Desktop/selenium/chromedriver 2");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
 

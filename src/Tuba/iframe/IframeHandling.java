@@ -29,8 +29,8 @@ public class IframeHandling {
         }
 
         // switch with index
-        driver.switchTo().frame(1);
-        driver.findElement(By.xpath("html/body/a/img")).click();
+//        driver.switchTo().frame(1);
+//        driver.findElement(By.xpath("html/body/a/img")).click();
 
 
     }
