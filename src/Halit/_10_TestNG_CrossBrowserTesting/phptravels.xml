@@ -1,0 +1,17 @@
+<suite name = "Suite1">
+    <test name = "TestInChrome">
+        <parameter name = "browser" value = "chrome"></parameter>
+            <classes>
+                <class name = "Halit._10_TestNG_CrossBrowserTesting._02_BookingFunctionality"></class>
+            </classes>
+    </test>
+
+
+    <test name = "TestInFirefox">
+        <parameter name = "browser" value = "firefox"></parameter>
+            <classes>
+                <class name = "Halit._10_TestNG_CrossBrowserTesting._02_BookingFunctionality"></class>
+            </classes>
+    </test>
+
+</suite>
