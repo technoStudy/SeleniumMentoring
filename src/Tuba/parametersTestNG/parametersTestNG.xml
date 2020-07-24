@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="SimpleTestSuite">
+    <parameter name="primeNumber" value="5"></parameter>
+    <parameter name="armStrongNumber" value="371"></parameter>
+    <parameter name="Destination" value="Manhattan"></parameter>
+    <parameter name="minPrice" value="0"></parameter>
+    <parameter name="maxPrice" value="500"></parameter>
+    <parameter name="ourPrice" value="200"></parameter>
+    <test name="SimpleTestNG">
+        <classes>
+            <class name="Tuba.parametersTestNG.HotelsTest"></class>
+        </classes>
+
+    </test>
+
+
+</suite>

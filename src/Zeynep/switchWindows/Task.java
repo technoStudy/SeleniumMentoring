@@ -1,10 +1,11 @@
 package Zeynep.switchWindows;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+
 
 import java.util.Set;
 
@@ -38,37 +39,37 @@ public class Task {
         //choose one of them
         driver.findElement(By.xpath("//h3[contains(text(),'Butterfly earrings')]")).click();
 
-        String mainWindowHandle = driver.getWindowHandle();
-
-        Set<String> windowHandles = driver.getWindowHandles();
-        for (String windowHandle : windowHandles) {
-            if (!windowHandle.equals(mainWindowHandle)){
-                driver.switchTo().window(windowHandle);
-            }
-        }
-
-        //get the text of earrings
-
-        String text = driver.findElement(By.cssSelector("div[data-component=\"listing-page-title-component\"]>h1")).getText();
-        System.out.println(text);
-
-        //select a color
-        driver.findElement(By.cssSelector("#inventory-variation-select-0>option:nth-child(5)")).click();
-
-        //select an option
-        driver.findElement(By.cssSelector("#inventory-variation-select-1>option:nth-child(2)")).click();
-
-        //add to cart
-        driver.findElement(By.cssSelector("button[type=\"submit\"]>div")).click();
-
-        //get the text from cart
-
-        String text_2 = driver.findElement(By.cssSelector("p[class=\"display-block pb-xs-1\"]>a")).getText();
-
-        System.out.println(text_2);
-
-        //verify two names
-        Assert.assertEquals(text, text_2);
+//        String mainWindowHandle = driver.getWindowHandle();
+//
+//        Set<String> windowHandles = driver.getWindowHandles();
+//        for (String windowHandle : windowHandles) {
+//            if (!windowHandle.equals(mainWindowHandle)){
+//                driver.switchTo().window(windowHandle);
+//            }
+//        }
+//
+//        //get the text of earrings
+//
+//        String text = driver.findElement(By.cssSelector("div[data-component=\"listing-page-title-component\"]>h1")).getText();
+//        System.out.println(text);
+//
+//        //select a color
+//        driver.findElement(By.cssSelector("#inventory-variation-select-0>option:nth-child(5)")).click();
+//
+//        //select an option
+//        driver.findElement(By.cssSelector("#inventory-variation-select-1>option:nth-child(2)")).click();
+//
+//        //add to cart
+//        driver.findElement(By.cssSelector("button[type=\"submit\"]>div")).click();
+//
+//        //get the text from cart
+//
+//        String text_2 = driver.findElement(By.cssSelector("p[class=\"display-block pb-xs-1\"]>a")).getText();
+//
+//        System.out.println(text_2);
+//
+//        //verify two names
+//        Assert.assertEquals(text, text_2);
 
     }
 }
