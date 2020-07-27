@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class _02_SwitchToWindow {
 
     /**
-     *                              Task
+     *                              _00_Task
      *        --> Navigate to "https://www.naukri.com/"
      *        --> Close second window
      *        --> Print current url

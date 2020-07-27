@@ -32,7 +32,9 @@ public class _02_BookingFunctionality extends _01_BaseDriver {
 
         seePriceButton.click();
 
-        WebElement selectRoom = driver.findElement(By.xpath("(//label[@class='custom-control-label text-left go-left'])[2]"));
+        WebElement selectRoom = driver.findElement(By.xpath("(//label[@class='custom-control-label text-left go-left'])[1]"));
+
+        wait.until(ExpectedConditions.elementToBeClickable(selectRoom));
 
         selectRoom.click();
 
