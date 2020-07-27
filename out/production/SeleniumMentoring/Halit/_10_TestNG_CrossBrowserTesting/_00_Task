@@ -1,4 +1,4 @@
-      - CREATE BASE CLASS
+ - CREATE BASE CLASS
           -> Navigate to "https://www.phptravels.net/home"
           -> Click on "My Account" and click on "login"
           -> Login: email = "user@phptravels.com" password = "demouser"
@@ -13,4 +13,3 @@
           -> Click "Pay on Arrival"
           -> Accept Alert
           -> Verify "Your booking status is Reserved" message is displayed!
-
